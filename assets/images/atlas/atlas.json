@@ -1,0 +1,1994 @@
+{
+"angel_idle_anim_f0": [
+175,
+222,
+16,
+16
+],
+"angel_idle_anim_f1": [
+192,
+222,
+16,
+16
+],
+"angel_idle_anim_f2": [
+209,
+222,
+16,
+16
+],
+"angel_idle_anim_f3": [
+226,
+222,
+16,
+16
+],
+"angel_run_anim_f0": [
+243,
+222,
+16,
+16
+],
+"angel_run_anim_f1": [
+260,
+222,
+16,
+16
+],
+"angel_run_anim_f2": [
+277,
+222,
+16,
+16
+],
+"angel_run_anim_f3": [
+294,
+222,
+16,
+16
+],
+"big_demon_idle_anim_f0": [
+46,
+1,
+32,
+36
+],
+"big_demon_idle_anim_f1": [
+79,
+1,
+32,
+36
+],
+"big_demon_idle_anim_f2": [
+112,
+1,
+32,
+36
+],
+"big_demon_idle_anim_f3": [
+145,
+1,
+32,
+36
+],
+"big_demon_run_anim_f0": [
+178,
+1,
+32,
+36
+],
+"big_demon_run_anim_f1": [
+211,
+1,
+32,
+36
+],
+"big_demon_run_anim_f2": [
+244,
+1,
+32,
+36
+],
+"big_demon_run_anim_f3": [
+277,
+1,
+32,
+36
+],
+"big_zombie_idle_anim_f0": [
+310,
+1,
+32,
+36
+],
+"big_zombie_idle_anim_f1": [
+343,
+1,
+32,
+36
+],
+"big_zombie_idle_anim_f2": [
+376,
+1,
+32,
+36
+],
+"big_zombie_idle_anim_f3": [
+409,
+1,
+32,
+36
+],
+"big_zombie_run_anim_f0": [
+442,
+1,
+32,
+36
+],
+"big_zombie_run_anim_f1": [
+475,
+1,
+32,
+36
+],
+"big_zombie_run_anim_f2": [
+1,
+50,
+32,
+36
+],
+"big_zombie_run_anim_f3": [
+34,
+50,
+32,
+36
+],
+"bomb_f0": [
+311,
+222,
+16,
+16
+],
+"bomb_f1": [
+328,
+222,
+16,
+16
+],
+"bomb_f2": [
+345,
+222,
+16,
+16
+],
+"chest_empty_open_anim_f0": [
+362,
+222,
+16,
+16
+],
+"chest_empty_open_anim_f1": [
+379,
+222,
+16,
+16
+],
+"chest_empty_open_anim_f2": [
+396,
+222,
+16,
+16
+],
+"chest_full_open_anim_f0": [
+413,
+222,
+16,
+16
+],
+"chest_full_open_anim_f1": [
+430,
+222,
+16,
+16
+],
+"chest_full_open_anim_f2": [
+447,
+222,
+16,
+16
+],
+"chest_mimic_open_anim_f0": [
+464,
+222,
+16,
+16
+],
+"chest_mimic_open_anim_f1": [
+481,
+222,
+16,
+16
+],
+"chest_mimic_open_anim_f2": [
+1,
+246,
+16,
+16
+],
+"chort_idle_anim_f0": [
+1,
+174,
+16,
+23
+],
+"chort_idle_anim_f1": [
+18,
+174,
+16,
+23
+],
+"chort_idle_anim_f2": [
+35,
+174,
+16,
+23
+],
+"chort_idle_anim_f3": [
+52,
+174,
+16,
+23
+],
+"chort_run_anim_f0": [
+69,
+174,
+16,
+23
+],
+"chort_run_anim_f1": [
+86,
+174,
+16,
+23
+],
+"chort_run_anim_f2": [
+103,
+174,
+16,
+23
+],
+"chort_run_anim_f3": [
+120,
+174,
+16,
+23
+],
+"coin_anim_f0": [
+197,
+297,
+6,
+7
+],
+"coin_anim_f1": [
+204,
+297,
+6,
+7
+],
+"coin_anim_f2": [
+211,
+297,
+6,
+7
+],
+"coin_anim_f3": [
+218,
+297,
+6,
+7
+],
+"column": [
+1,
+1,
+16,
+48
+],
+"column_wall": [
+18,
+1,
+16,
+48
+],
+"crate": [
+450,
+145,
+16,
+24
+],
+"doc_idle_anim_f0": [
+137,
+174,
+16,
+23
+],
+"doc_idle_anim_f1": [
+154,
+174,
+16,
+23
+],
+"doc_idle_anim_f2": [
+171,
+174,
+16,
+23
+],
+"doc_idle_anim_f3": [
+188,
+174,
+16,
+23
+],
+"doc_run_anim_f0": [
+205,
+174,
+16,
+23
+],
+"doc_run_anim_f1": [
+222,
+174,
+16,
+23
+],
+"doc_run_anim_f2": [
+239,
+174,
+16,
+23
+],
+"doc_run_anim_f3": [
+256,
+174,
+16,
+23
+],
+"dwarf_f_hit_anim_f0": [
+408,
+50,
+16,
+28
+],
+"dwarf_f_idle_anim_f0": [
+425,
+50,
+16,
+28
+],
+"dwarf_f_idle_anim_f1": [
+442,
+50,
+16,
+28
+],
+"dwarf_f_idle_anim_f2": [
+459,
+50,
+16,
+28
+],
+"dwarf_f_idle_anim_f3": [
+476,
+50,
+16,
+28
+],
+"dwarf_f_run_anim_f0": [
+493,
+50,
+16,
+28
+],
+"dwarf_f_run_anim_f1": [
+1,
+87,
+16,
+28
+],
+"dwarf_f_run_anim_f2": [
+18,
+87,
+16,
+28
+],
+"dwarf_f_run_anim_f3": [
+35,
+87,
+16,
+28
+],
+"dwarf_m_hit_anim_f0": [
+52,
+87,
+16,
+28
+],
+"dwarf_m_idle_anim_f0": [
+69,
+87,
+16,
+28
+],
+"dwarf_m_idle_anim_f1": [
+86,
+87,
+16,
+28
+],
+"dwarf_m_idle_anim_f2": [
+103,
+87,
+16,
+28
+],
+"dwarf_m_idle_anim_f3": [
+120,
+87,
+16,
+28
+],
+"dwarf_m_run_anim_f0": [
+137,
+87,
+16,
+28
+],
+"dwarf_m_run_anim_f1": [
+154,
+87,
+16,
+28
+],
+"dwarf_m_run_anim_f2": [
+171,
+87,
+16,
+28
+],
+"dwarf_m_run_anim_f3": [
+188,
+87,
+16,
+28
+],
+"elf_f_hit_anim_f0": [
+205,
+87,
+16,
+28
+],
+"elf_f_idle_anim_f0": [
+222,
+87,
+16,
+28
+],
+"elf_f_idle_anim_f1": [
+239,
+87,
+16,
+28
+],
+"elf_f_idle_anim_f2": [
+256,
+87,
+16,
+28
+],
+"elf_f_idle_anim_f3": [
+273,
+87,
+16,
+28
+],
+"elf_f_run_anim_f0": [
+290,
+87,
+16,
+28
+],
+"elf_f_run_anim_f1": [
+307,
+87,
+16,
+28
+],
+"elf_f_run_anim_f2": [
+324,
+87,
+16,
+28
+],
+"elf_f_run_anim_f3": [
+341,
+87,
+16,
+28
+],
+"elf_m_hit_anim_f0": [
+358,
+87,
+16,
+28
+],
+"elf_m_idle_anim_f0": [
+375,
+87,
+16,
+28
+],
+"elf_m_idle_anim_f1": [
+392,
+87,
+16,
+28
+],
+"elf_m_idle_anim_f2": [
+409,
+87,
+16,
+28
+],
+"elf_m_idle_anim_f3": [
+426,
+87,
+16,
+28
+],
+"elf_m_run_anim_f0": [
+443,
+87,
+16,
+28
+],
+"elf_m_run_anim_f1": [
+460,
+87,
+16,
+28
+],
+"elf_m_run_anim_f2": [
+477,
+87,
+16,
+28
+],
+"elf_m_run_anim_f3": [
+494,
+87,
+16,
+28
+],
+"flask_big_blue": [
+18,
+246,
+16,
+16
+],
+"flask_big_green": [
+35,
+246,
+16,
+16
+],
+"flask_big_red": [
+52,
+246,
+16,
+16
+],
+"flask_big_yellow": [
+69,
+246,
+16,
+16
+],
+"flask_blue": [
+86,
+246,
+16,
+16
+],
+"flask_green": [
+103,
+246,
+16,
+16
+],
+"flask_red": [
+120,
+246,
+16,
+16
+],
+"flask_yellow": [
+137,
+246,
+16,
+16
+],
+"floor_1": [
+154,
+246,
+16,
+16
+],
+"floor_2": [
+171,
+246,
+16,
+16
+],
+"floor_3": [
+188,
+246,
+16,
+16
+],
+"floor_4": [
+205,
+246,
+16,
+16
+],
+"floor_5": [
+222,
+246,
+16,
+16
+],
+"floor_6": [
+239,
+246,
+16,
+16
+],
+"floor_7": [
+256,
+246,
+16,
+16
+],
+"floor_8": [
+273,
+246,
+16,
+16
+],
+"floor_ladder": [
+290,
+246,
+16,
+16
+],
+"floor_spikes_anim_f0": [
+307,
+246,
+16,
+16
+],
+"floor_spikes_anim_f1": [
+324,
+246,
+16,
+16
+],
+"floor_spikes_anim_f2": [
+341,
+246,
+16,
+16
+],
+"floor_spikes_anim_f3": [
+358,
+246,
+16,
+16
+],
+"floor_stairs": [
+375,
+246,
+16,
+16
+],
+"goblin_idle_anim_f0": [
+392,
+246,
+16,
+16
+],
+"goblin_idle_anim_f1": [
+409,
+246,
+16,
+16
+],
+"goblin_idle_anim_f2": [
+426,
+246,
+16,
+16
+],
+"goblin_idle_anim_f3": [
+443,
+246,
+16,
+16
+],
+"goblin_run_anim_f0": [
+460,
+246,
+16,
+16
+],
+"goblin_run_anim_f1": [
+477,
+246,
+16,
+16
+],
+"goblin_run_anim_f2": [
+494,
+246,
+16,
+16
+],
+"goblin_run_anim_f3": [
+1,
+263,
+16,
+16
+],
+"hole": [
+18,
+263,
+16,
+16
+],
+"ice_zombie_anim_f0": [
+35,
+263,
+16,
+16
+],
+"ice_zombie_anim_f1": [
+52,
+263,
+16,
+16
+],
+"ice_zombie_anim_f2": [
+69,
+263,
+16,
+16
+],
+"ice_zombie_anim_f3": [
+86,
+263,
+16,
+16
+],
+"imp_idle_anim_f0": [
+103,
+263,
+16,
+16
+],
+"imp_idle_anim_f1": [
+120,
+263,
+16,
+16
+],
+"imp_idle_anim_f2": [
+137,
+263,
+16,
+16
+],
+"imp_idle_anim_f3": [
+154,
+263,
+16,
+16
+],
+"imp_run_anim_f0": [
+171,
+263,
+16,
+16
+],
+"imp_run_anim_f1": [
+188,
+263,
+16,
+16
+],
+"imp_run_anim_f2": [
+205,
+263,
+16,
+16
+],
+"imp_run_anim_f3": [
+222,
+263,
+16,
+16
+],
+"knight_f_hit_anim_f0": [
+1,
+116,
+16,
+28
+],
+"knight_f_idle_anim_f0": [
+18,
+116,
+16,
+28
+],
+"knight_f_idle_anim_f1": [
+35,
+116,
+16,
+28
+],
+"knight_f_idle_anim_f2": [
+52,
+116,
+16,
+28
+],
+"knight_f_idle_anim_f3": [
+69,
+116,
+16,
+28
+],
+"knight_f_run_anim_f0": [
+86,
+116,
+16,
+28
+],
+"knight_f_run_anim_f1": [
+103,
+116,
+16,
+28
+],
+"knight_f_run_anim_f2": [
+120,
+116,
+16,
+28
+],
+"knight_f_run_anim_f3": [
+137,
+116,
+16,
+28
+],
+"knight_m_hit_anim_f0": [
+154,
+116,
+16,
+28
+],
+"knight_m_idle_anim_f0": [
+171,
+116,
+16,
+28
+],
+"knight_m_idle_anim_f1": [
+188,
+116,
+16,
+28
+],
+"knight_m_idle_anim_f2": [
+205,
+116,
+16,
+28
+],
+"knight_m_idle_anim_f3": [
+222,
+116,
+16,
+28
+],
+"knight_m_run_anim_f0": [
+239,
+116,
+16,
+28
+],
+"knight_m_run_anim_f1": [
+256,
+116,
+16,
+28
+],
+"knight_m_run_anim_f2": [
+273,
+116,
+16,
+28
+],
+"knight_m_run_anim_f3": [
+290,
+116,
+16,
+28
+],
+"lizard_f_hit_anim_f0": [
+307,
+116,
+16,
+28
+],
+"lizard_f_idle_anim_f0": [
+324,
+116,
+16,
+28
+],
+"lizard_f_idle_anim_f1": [
+341,
+116,
+16,
+28
+],
+"lizard_f_idle_anim_f2": [
+358,
+116,
+16,
+28
+],
+"lizard_f_idle_anim_f3": [
+375,
+116,
+16,
+28
+],
+"lizard_f_run_anim_f0": [
+392,
+116,
+16,
+28
+],
+"lizard_f_run_anim_f1": [
+409,
+116,
+16,
+28
+],
+"lizard_f_run_anim_f2": [
+426,
+116,
+16,
+28
+],
+"lizard_f_run_anim_f3": [
+443,
+116,
+16,
+28
+],
+"lizard_m_hit_anim_f0": [
+460,
+116,
+16,
+28
+],
+"lizard_m_idle_anim_f0": [
+477,
+116,
+16,
+28
+],
+"lizard_m_idle_anim_f1": [
+494,
+116,
+16,
+28
+],
+"lizard_m_idle_anim_f2": [
+1,
+145,
+16,
+28
+],
+"lizard_m_idle_anim_f3": [
+18,
+145,
+16,
+28
+],
+"lizard_m_run_anim_f0": [
+35,
+145,
+16,
+28
+],
+"lizard_m_run_anim_f1": [
+52,
+145,
+16,
+28
+],
+"lizard_m_run_anim_f2": [
+69,
+145,
+16,
+28
+],
+"lizard_m_run_anim_f3": [
+86,
+145,
+16,
+28
+],
+"masked_orc_idle_anim_f0": [
+273,
+174,
+16,
+23
+],
+"masked_orc_idle_anim_f1": [
+290,
+174,
+16,
+23
+],
+"masked_orc_idle_anim_f2": [
+307,
+174,
+16,
+23
+],
+"masked_orc_idle_anim_f3": [
+324,
+174,
+16,
+23
+],
+"masked_orc_run_anim_f0": [
+341,
+174,
+16,
+23
+],
+"masked_orc_run_anim_f1": [
+358,
+174,
+16,
+23
+],
+"masked_orc_run_anim_f2": [
+375,
+174,
+16,
+23
+],
+"masked_orc_run_anim_f3": [
+392,
+174,
+16,
+23
+],
+"muddy_anim_f0": [
+239,
+263,
+16,
+16
+],
+"muddy_anim_f1": [
+256,
+263,
+16,
+16
+],
+"muddy_anim_f2": [
+273,
+263,
+16,
+16
+],
+"muddy_anim_f3": [
+290,
+263,
+16,
+16
+],
+"necromancer_anim_f0": [
+409,
+174,
+16,
+23
+],
+"necromancer_anim_f1": [
+426,
+174,
+16,
+23
+],
+"necromancer_anim_f2": [
+443,
+174,
+16,
+23
+],
+"necromancer_anim_f3": [
+460,
+174,
+16,
+23
+],
+"ogre_idle_anim_f0": [
+67,
+50,
+32,
+36
+],
+"ogre_idle_anim_f1": [
+100,
+50,
+32,
+36
+],
+"ogre_idle_anim_f2": [
+133,
+50,
+32,
+36
+],
+"ogre_idle_anim_f3": [
+166,
+50,
+32,
+36
+],
+"ogre_run_anim_f0": [
+199,
+50,
+32,
+36
+],
+"ogre_run_anim_f1": [
+232,
+50,
+32,
+36
+],
+"ogre_run_anim_f2": [
+265,
+50,
+32,
+36
+],
+"ogre_run_anim_f3": [
+298,
+50,
+32,
+36
+],
+"orc_shaman_idle_anim_f0": [
+477,
+174,
+16,
+23
+],
+"orc_shaman_idle_anim_f1": [
+494,
+174,
+16,
+23
+],
+"orc_shaman_idle_anim_f2": [
+1,
+198,
+16,
+23
+],
+"orc_shaman_idle_anim_f3": [
+18,
+198,
+16,
+23
+],
+"orc_shaman_run_anim_f0": [
+35,
+198,
+16,
+23
+],
+"orc_shaman_run_anim_f1": [
+52,
+198,
+16,
+23
+],
+"orc_shaman_run_anim_f2": [
+69,
+198,
+16,
+23
+],
+"orc_shaman_run_anim_f3": [
+86,
+198,
+16,
+23
+],
+"orc_warrior_idle_anim_f0": [
+103,
+198,
+16,
+23
+],
+"orc_warrior_idle_anim_f1": [
+120,
+198,
+16,
+23
+],
+"orc_warrior_idle_anim_f2": [
+137,
+198,
+16,
+23
+],
+"orc_warrior_idle_anim_f3": [
+154,
+198,
+16,
+23
+],
+"orc_warrior_run_anim_f0": [
+171,
+198,
+16,
+23
+],
+"orc_warrior_run_anim_f1": [
+188,
+198,
+16,
+23
+],
+"orc_warrior_run_anim_f2": [
+205,
+198,
+16,
+23
+],
+"orc_warrior_run_anim_f3": [
+222,
+198,
+16,
+23
+],
+"pumpkin_dude_idle_anim_f0": [
+239,
+198,
+16,
+23
+],
+"pumpkin_dude_idle_anim_f1": [
+256,
+198,
+16,
+23
+],
+"pumpkin_dude_idle_anim_f2": [
+273,
+198,
+16,
+23
+],
+"pumpkin_dude_idle_anim_f3": [
+290,
+198,
+16,
+23
+],
+"pumpkin_dude_run_anim_f0": [
+307,
+198,
+16,
+23
+],
+"pumpkin_dude_run_anim_f1": [
+324,
+198,
+16,
+23
+],
+"pumpkin_dude_run_anim_f2": [
+341,
+198,
+16,
+23
+],
+"pumpkin_dude_run_anim_f3": [
+358,
+198,
+16,
+23
+],
+"skelet_idle_anim_f0": [
+307,
+263,
+16,
+16
+],
+"skelet_idle_anim_f1": [
+324,
+263,
+16,
+16
+],
+"skelet_idle_anim_f2": [
+341,
+263,
+16,
+16
+],
+"skelet_idle_anim_f3": [
+358,
+263,
+16,
+16
+],
+"skelet_run_anim_f0": [
+375,
+263,
+16,
+16
+],
+"skelet_run_anim_f1": [
+392,
+263,
+16,
+16
+],
+"skelet_run_anim_f2": [
+409,
+263,
+16,
+16
+],
+"skelet_run_anim_f3": [
+426,
+263,
+16,
+16
+],
+"skull": [
+443,
+263,
+16,
+16
+],
+"slug_anim_f0": [
+375,
+198,
+16,
+23
+],
+"slug_anim_f1": [
+392,
+198,
+16,
+23
+],
+"slug_anim_f2": [
+409,
+198,
+16,
+23
+],
+"slug_anim_f3": [
+426,
+198,
+16,
+23
+],
+"swampy_anim_f0": [
+460,
+263,
+16,
+16
+],
+"swampy_anim_f1": [
+477,
+263,
+16,
+16
+],
+"swampy_anim_f2": [
+494,
+263,
+16,
+16
+],
+"swampy_anim_f3": [
+1,
+280,
+16,
+16
+],
+"tiny_slug_anim_f0": [
+18,
+280,
+16,
+16
+],
+"tiny_slug_anim_f1": [
+35,
+280,
+16,
+16
+],
+"tiny_slug_anim_f2": [
+52,
+280,
+16,
+16
+],
+"tiny_slug_anim_f3": [
+69,
+280,
+16,
+16
+],
+"tiny_zombie_idle_anim_f0": [
+86,
+280,
+16,
+16
+],
+"tiny_zombie_idle_anim_f1": [
+103,
+280,
+16,
+16
+],
+"tiny_zombie_idle_anim_f2": [
+120,
+280,
+16,
+16
+],
+"tiny_zombie_idle_anim_f3": [
+137,
+280,
+16,
+16
+],
+"tiny_zombie_run_anim_f0": [
+154,
+280,
+16,
+16
+],
+"tiny_zombie_run_anim_f1": [
+171,
+280,
+16,
+16
+],
+"tiny_zombie_run_anim_f2": [
+188,
+280,
+16,
+16
+],
+"tiny_zombie_run_anim_f3": [
+205,
+280,
+16,
+16
+],
+"ui_heart_empty": [
+155,
+297,
+13,
+12
+],
+"ui_heart_full": [
+169,
+297,
+13,
+12
+],
+"ui_heart_half": [
+183,
+297,
+13,
+12
+],
+"wall_banner_blue": [
+222,
+280,
+16,
+16
+],
+"wall_banner_green": [
+239,
+280,
+16,
+16
+],
+"wall_banner_red": [
+256,
+280,
+16,
+16
+],
+"wall_banner_yellow": [
+273,
+280,
+16,
+16
+],
+"wall_fountain_basin_red_anim_f0": [
+290,
+280,
+16,
+16
+],
+"wall_fountain_basin_red_anim_f1": [
+307,
+280,
+16,
+16
+],
+"wall_fountain_basin_red_anim_f2": [
+324,
+280,
+16,
+16
+],
+"wall_fountain_mid_red_anim_f0": [
+341,
+280,
+16,
+16
+],
+"wall_fountain_mid_red_anim_f1": [
+358,
+280,
+16,
+16
+],
+"wall_fountain_mid_red_anim_f2": [
+375,
+280,
+16,
+16
+],
+"wall_fountain_top_1": [
+392,
+280,
+16,
+16
+],
+"wall_goo": [
+409,
+280,
+16,
+16
+],
+"wall_goo_base": [
+426,
+280,
+16,
+16
+],
+"wall_hole_1": [
+443,
+280,
+16,
+16
+],
+"wall_hole_2": [
+460,
+280,
+16,
+16
+],
+"wall_left": [
+477,
+280,
+16,
+16
+],
+"wall_mid": [
+494,
+280,
+16,
+16
+],
+"wall_right": [
+1,
+297,
+16,
+16
+],
+"wall_top_left": [
+18,
+297,
+16,
+16
+],
+"wall_top_mid": [
+35,
+297,
+16,
+16
+],
+"wall_top_right": [
+52,
+297,
+16,
+16
+],
+"weapon_anime_sword": [
+331,
+50,
+12,
+30
+],
+"weapon_arrow": [
+114,
+222,
+7,
+21
+],
+"weapon_axe": [
+122,
+222,
+9,
+21
+],
+"weapon_baton_with_spikes": [
+86,
+222,
+10,
+22
+],
+"weapon_big_hammer": [
+35,
+1,
+10,
+37
+],
+"weapon_bow": [
+409,
+145,
+14,
+26
+],
+"weapon_bow_2": [
+424,
+145,
+14,
+26
+],
+"weapon_cleaver": [
+165,
+222,
+9,
+19
+],
+"weapon_double_axe": [
+467,
+145,
+16,
+24
+],
+"weapon_duel_sword": [
+344,
+50,
+9,
+30
+],
+"weapon_golden_sword": [
+97,
+222,
+10,
+22
+],
+"weapon_green_magic_staff": [
+354,
+50,
+8,
+30
+],
+"weapon_hammer": [
+484,
+145,
+10,
+24
+],
+"weapon_katana": [
+390,
+50,
+6,
+29
+],
+"weapon_knife": [
+148,
+297,
+6,
+13
+],
+"weapon_knight_sword": [
+397,
+50,
+10,
+29
+],
+"weapon_lavish_sword": [
+363,
+50,
+10,
+30
+],
+"weapon_mace": [
+495,
+145,
+10,
+24
+],
+"weapon_machete": [
+108,
+222,
+5,
+22
+],
+"weapon_red_gem_sword": [
+132,
+222,
+10,
+21
+],
+"weapon_red_magic_staff": [
+374,
+50,
+8,
+30
+],
+"weapon_regular_sword": [
+143,
+222,
+10,
+21
+],
+"weapon_rusty_sword": [
+154,
+222,
+10,
+21
+],
+"weapon_saw_sword": [
+439,
+145,
+10,
+25
+],
+"weapon_spear": [
+383,
+50,
+6,
+30
+],
+"weapon_throwing_axe": [
+137,
+297,
+10,
+14
+],
+"weapon_waraxe": [
+443,
+198,
+12,
+23
+],
+"wizzard_f_hit_anim_f0": [
+103,
+145,
+16,
+28
+],
+"wizzard_f_idle_anim_f0": [
+120,
+145,
+16,
+28
+],
+"wizzard_f_idle_anim_f1": [
+137,
+145,
+16,
+28
+],
+"wizzard_f_idle_anim_f2": [
+154,
+145,
+16,
+28
+],
+"wizzard_f_idle_anim_f3": [
+171,
+145,
+16,
+28
+],
+"wizzard_f_run_anim_f0": [
+188,
+145,
+16,
+28
+],
+"wizzard_f_run_anim_f1": [
+205,
+145,
+16,
+28
+],
+"wizzard_f_run_anim_f2": [
+222,
+145,
+16,
+28
+],
+"wizzard_f_run_anim_f3": [
+239,
+145,
+16,
+28
+],
+"wizzard_m_hit_anim_f0": [
+256,
+145,
+16,
+28
+],
+"wizzard_m_idle_anim_f0": [
+273,
+145,
+16,
+28
+],
+"wizzard_m_idle_anim_f1": [
+290,
+145,
+16,
+28
+],
+"wizzard_m_idle_anim_f2": [
+307,
+145,
+16,
+28
+],
+"wizzard_m_idle_anim_f3": [
+324,
+145,
+16,
+28
+],
+"wizzard_m_run_anim_f0": [
+341,
+145,
+16,
+28
+],
+"wizzard_m_run_anim_f1": [
+358,
+145,
+16,
+28
+],
+"wizzard_m_run_anim_f2": [
+375,
+145,
+16,
+28
+],
+"wizzard_m_run_anim_f3": [
+392,
+145,
+16,
+28
+],
+"wogol_idle_anim_f0": [
+456,
+198,
+16,
+23
+],
+"wogol_idle_anim_f1": [
+473,
+198,
+16,
+23
+],
+"wogol_idle_anim_f2": [
+490,
+198,
+16,
+23
+],
+"wogol_idle_anim_f3": [
+1,
+222,
+16,
+23
+],
+"wogol_run_anim_f0": [
+18,
+222,
+16,
+23
+],
+"wogol_run_anim_f1": [
+35,
+222,
+16,
+23
+],
+"wogol_run_anim_f2": [
+52,
+222,
+16,
+23
+],
+"wogol_run_anim_f3": [
+69,
+222,
+16,
+23
+],
+"zombie_anim_f1": [
+69,
+297,
+16,
+16
+],
+"zombie_anim_f10": [
+86,
+297,
+16,
+16
+],
+"zombie_anim_f2": [
+103,
+297,
+16,
+16
+],
+"zombie_anim_f3": [
+120,
+297,
+16,
+16
+]
+}

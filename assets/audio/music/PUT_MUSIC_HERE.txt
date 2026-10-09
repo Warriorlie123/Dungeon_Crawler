@@ -1,0 +1,3 @@
+Put music tracks here (.ogg recommended, .wav/.mp3 also work).
+File names: menu, act1, act2, boss, shop, story, ending
+See ../sfx/SOUND_LIST.txt for descriptions.

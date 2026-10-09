@@ -1,0 +1,69 @@
+SOUND EFFECTS  ->  put files in assets/audio/sfx/  as <name>.wav (or .ogg / .mp3)
+Missing files are fine: the game falls back to a similar sound or stays silent.
+
+melee_whoosh.wav             generic weapon swing whoosh (fallback for all melee)   [fallback: shot]
+sword_swing.wav              Sir Aldric - sword swing, metallic whoosh   [fallback: melee_whoosh]
+spear_thrust.wav             Dame Rowena - quick spear/sword thrust with a holy shimmer   [fallback: melee_whoosh]
+axe_swing.wav                Borin - heavy axe swing, deep whoosh   [fallback: melee_whoosh]
+hammer_smash.wav             Hilda - hammer swing with a heavy thud   [fallback: melee_whoosh]
+bow_twang.wav                Faelar - bow string release   [fallback: shot]
+bow_quick.wav                Sylwen - short, light bow shot   [fallback: bow_twang]
+knife_throw.wav              Ssarik - thrown knife whizz   [fallback: shot]
+blade_slash.wav              Vexa - fast thin blade slash   [fallback: melee_whoosh]
+fire_cast.wav                Ignatius - fire bolt cast (fwoosh)   [fallback: shot]
+frost_cast.wav               Isolde - ice bolt cast (crystal chime)   [fallback: shot]
+melee_hit.wav                weapon hits flesh (melee impact)   [fallback: hit]
+ability_bulwark.wav          Bulwark - shield raise, metallic clang
+ability_consecration.wav     Consecration - holy choir burst
+ability_whirlwind.wav        Whirlwind - spinning wind loop (~3s)
+ability_powder_keg.wav       Powder Keg - bomb throw + fuse hiss
+ability_arrow_rain.wav       Arrow Storm - many bows firing at once   [fallback: bow_twang]
+ability_focus.wav            Hunter's Focus - deep breath / power-up
+ability_smoke_step.wav       Smoke Step - poof + vanish   [fallback: teleport]
+ability_venom.wav            Venom Edge - hiss / blade coating
+ability_meteor.wav           Meteor - incoming fireball whistle
+ability_frost_nova.wav       Frost Nova - ice burst / shatter
+player_hurt.wav              player takes damage (grunt / hit)   [fallback: hit]
+player_death.wav             player dies
+dash.wav                     dash whoosh
+shield_block.wav             Guardian Rune absorbs a hit (glass ding)
+ability_ready.wav            ability cooldown finished (soft ping)
+enemy_death.wav              generic monster death (squish / poof)
+enemy_shoot.wav              enemy fires a projectile (whoosh)
+bones_rise.wav               skeleton reassembles (rattling bones)
+teleport.wav                 teleport puff (chort / bosses)
+explosion.wav                bomb / meteor explosion
+bomb_throw.wav               bomb or flask thrown (short whoosh)
+splash.wav                   poison flask shatters on the floor
+spikes.wav                   spike trap shoots up
+freeze.wav                   enemy frozen (ice crackle)
+boss_roar.wav                boss notices you / fight starts (roar)
+boss_slam.wav                boss ground slam (deep boom)   [fallback: explosion]
+boss_defeated.wav            boss dies (big crash + reverb)   [fallback: explosion]
+chest_open.wav               treasure chest opens
+mimic.wav                    mimic reveals itself (chomp + growl)
+crate_break.wav              wooden crate breaks
+potion_drink.wav             drink a flask (gulp)   [fallback: heal]
+exit_unlock.wav              floor cleared - the ladder unlocks (chime + latch)   [fallback: ability_ready]
+level_complete.wav           climbing down the ladder / level done
+ui_move.wav                  menu cursor moves (tick)
+ui_confirm.wav               menu confirm
+ui_back.wav                  menu back / cancel
+shop_buy.wav                 purchase (cash register / coins)   [fallback: coin]
+shop_deny.wav                cannot afford (buzz)
+forge.wav                    weapon upgraded at the Forge (anvil clang)   [fallback: shop_buy]
+text_blip.wav                cutscene typewriter blip (very short)
+pause.wav                    game paused
+game_over.wav                GAME OVER jingle (2-4s)
+victory.wav                  final victory fanfare (3-6s)
+
+MUSIC  ->  put files in assets/audio/music/  (loops, .ogg recommended)
+Missing tracks fall back to the original assets/audio/music.wav
+
+menu.ogg                     main menu & hero select (loop)
+act1.ogg                     levels 1-10, the Undercroft (loop)
+act2.ogg                     levels 11-20, the Hollow Deep - darker (loop)
+boss.ogg                     boss fights (loop, intense)
+shop.ogg                     Grizzle's shop - calm, a bit silly (loop)
+story.ogg                    cutscenes - atmospheric (loop)
+ending.ogg                   ending / victory screen
