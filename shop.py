@@ -57,7 +57,7 @@ def _forge(p):   p.weapon_tier += 1      # Game rebuilds the weapon object
 CATALOGUE = [
     ShopItem("heal",   "Healing Draught", "Restore 40 HP now",              6, 2, 99, _heal, always=True),
     ShopItem("forge",  "THE FORGE",       "Upgrade your weapon a tier",    25, 25, 99, _forge, always=True),
-    ShopItem("potion", "Spare Potion",    "Carry one, H to drink",          8, 2, 3, _potion),
+    ShopItem("potion", "Spare Potion",    "Carry one, H to drink",          8, 2, 99, _potion),
     ShopItem("maxhp",  "Heart Container", "+20 max HP",                    18, 10, 6, _max_hp),
     ShopItem("dmg",    "Whetstone",       "+20% damage",                   15, 10, 8, _damage),
     ShopItem("rate",   "Quick Hands",     "Attack 13% faster",             15, 10, 5, _rate),
@@ -267,7 +267,7 @@ class Shop:
             ("Dash cooldown", f"{1.2 * p.dash_cd_mult:.1f}s"),
             (f"{h.ability.name}", f"{p.ability_cd / 1000:.1f}s"),
             ("Shields", str(p.shields)),
-            ("Potions", f"{p.potions}/3"),
+            ("Potions", str(p.potions)),
             ("Coin magnet", f"{p.magnet}px"),
         ]
         yy = y + 96

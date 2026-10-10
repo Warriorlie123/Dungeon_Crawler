@@ -285,7 +285,7 @@ class PlayerShot(pygame.sprite.Sprite):
                     self._impact(game, now)
                     return
                 game.hit_enemy(enemy, self.damage, now, push=(self.dx / sp, self.dy / sp),
-                               slow_ms=self.slow_ms)
+                               slow_ms=self.slow_ms, ranged=True)
                 self.already_hit.add(id(enemy))
                 if self.pierce_left > 0:
                     self.pierce_left -= 1

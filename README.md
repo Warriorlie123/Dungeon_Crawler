@@ -142,8 +142,10 @@ those minions die together with their master.
   wall decorations.
 * **Props:** crates you can break, chests (watch out for mimics) and spike
   traps. Spikes hurt monsters too, so lure them in.
-* **Flasks:** red heals, blue resets your ability cooldown, green regenerates,
-  and yellow gives a speed boost. Big flasks are stronger.
+* **Flasks:** red health flasks always go into your potion bag (a big one
+  counts as two), there is no limit on how many you carry, and `H` drinks one
+  for +25 HP. Blue resets your ability cooldown, green regenerates, and yellow
+  gives a speed boost. Big flasks are stronger.
 * **Shop (Grizzle the goblin):** healing, the **Forge**, max HP, damage,
   attack speed, multishot and pierce (ranged heroes), reach (melee heroes),
   boots, magnet, shields, dash and ability cooldowns.
@@ -179,6 +181,21 @@ those minions die together with their master.
   `character.Boss`, then set it in `_BOSS_AT`.
 * **A hero:** add a `Hero` to `heroes.py`. If it needs a new ability, add one
   function to `abilities.py`.
+
+## Difficulty tuning
+
+Two things made the game too easy, and both are now tuned in `constants.py`:
+
+* **Ranged heroes stun-locked everything.** Every arrow, knife or bolt used to
+  flinch the enemy and push it back, so most monsters never reached a ranged
+  hero. Ranged hits no longer flinch, push 65% less and deal 15% less damage
+  (`RANGED_DAMAGE_MULT`, `RANGED_KNOCKBACK_MULT`).
+* **Bosses were slow and predictable.** Bosses now have 15% more health,
+  their projectiles fly 15% faster and hit a little harder, their patterns
+  come back 15% sooner, and aimed shots and spreads partly lead a moving
+  player. A boss far from you speeds up to close in, every boss has at least
+  one ranged attack, and in their last phase bosses fire 3-shot fans and
+  denser rings (`BOSS_*` constants).
 
 ## Credits
 

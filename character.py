@@ -278,7 +278,7 @@ class Enemy(Actor):
         self.next_contact = 0        # contact-attack cooldown
 
     # --------------------------------------------------------------- hit
-    def hurt(self, amount, now, push_dir=None, stagger_ms=0):
+    def hurt(self, amount, now, push_dir=None, stagger_ms=0, flinch=True):
         """
         push_dir   : knock-back direction; its LENGTH scales the strength
                      (melee weapons pass ~2.4 so enemies are shoved out of
@@ -288,7 +288,7 @@ class Enemy(Actor):
         """
         self.health -= amount
         self.flash_until = now + 90
-        if not self.has_status("frozen", now):
+        if not self.has_status("frozen", now) and (flinch or stagger_ms):
             self.stunned_until = now + max(constants.ENEMY_STUN_MS, stagger_ms)
         self.show_bar_until = now + 2500
         self.awake = True
@@ -621,7 +621,7 @@ class Boss(Enemy):
         shim = MonsterType(btype.name, btype.sprite, hp=btype.hp, speed=btype.speed, damage=btype.damage,
                            behaviour="boss", hitbox=btype.hitbox, draw_scale=btype.draw_scale,
                            tint=btype.tint, projectile=btype.projectile)
-        super().__init__(key, shim, x, y, assets, {"hp_mult": 1.0, "dmg_mult": 1.0})
+        super().__init__(key, shim, x, y, assets, {"hp_mult": constants.BOSS_HP_MULT, "dmg_mult": 1.0})
         self.btype = btype
         self.name = btype.name
         self.next_ready = {p: 0 for p in self.COOLDOWNS}
@@ -641,7 +641,7 @@ class Boss(Enemy):
                 return pats
         return self.btype.phases[-1][1]
 
-    def hurt(self, amount, now, push_dir=None, stagger_ms=0):
+    def hurt(self, amount, now, push_dir=None, stagger_ms=0, flinch=True):
         super().hurt(amount, now, None)
         self.stunned_until = 0           # bosses don't flinch
 
@@ -672,6 +672,8 @@ class Boss(Enemy):
         pats = self.phase_patterns
         enraged = self.phase_index == 0 and len(self.btype.phases) > 1
         speed = self.speed * (1.3 if enraged else 1.0) * (0.6 if self.has_status("slow", now) else 1)
+        if dist > constants.BOSS_PURSUIT_RANGE:
+            speed *= constants.BOSS_PURSUIT_MULT      # kiting from far away no longer works
         tx, ty = player.rect.centerx - self.rect.centerx, player.rect.centery - self.rect.centery
         d = math.hypot(tx, ty) or 1
         ux, uy = tx / d, ty / d
@@ -681,7 +683,7 @@ class Boss(Enemy):
             dx, dy = self._charger(now, ux, uy, dist, True, speed)
             if self.charge_state is None:
                 self.next_ready["charge"] = now + self.COOLDOWNS["charge"]
-        elif dist > 140:
+        elif dist > 90:
             dx, dy = ux * speed, uy * speed
         self.running = bool(dx or dy)
         self.flip = dx < 0 if dx else self.flip
@@ -705,18 +707,19 @@ class Boss(Enemy):
         for p in pats:
             if now >= self.next_ready[p]:
                 fired = self._fire(p, now, game)
-                self.next_ready[p] = now + int(self.COOLDOWNS[p] * (0.75 if enraged else 1.0))
+                self.next_ready[p] = now + int(self.COOLDOWNS[p] * constants.BOSS_COOLDOWN_MULT
+                                               * (0.75 if enraged else 1.0))
                 if fired:
-                    self.global_gap_until = now + 450
+                    self.global_gap_until = now + constants.BOSS_GLOBAL_GAP_MS
                     break
 
     def _radial(self, game, angle, speed_mult=1.0, homing=0.0, kind=None):
-        sp = constants.PROJECTILE_SPEED * speed_mult
+        sp = constants.PROJECTILE_SPEED * constants.BOSS_BULLET_SPEED * speed_mult
         effect = "poison" if self.btype.projectile == "poison" else None
         game.projectiles.add(Projectile(self.assets.projectiles[kind or self.btype.projectile],
                                         self.rect.centerx, self.rect.centery,
                                         math.cos(angle) * sp, math.sin(angle) * sp,
-                                        int(self.damage * 0.7), effect=effect, homing=homing,
+                                        int(self.damage * constants.BOSS_BULLET_DAMAGE), effect=effect, homing=homing,
                                         life=300 if homing else 240))
 
     def _fire(self, p, now, game):
@@ -724,16 +727,29 @@ class Boss(Enemy):
         if p in ("aimed", "spread3", "spread5", "ring", "cross", "homing"):
             game.assets.play("enemy_shoot")
         base = math.atan2(pl.rect.centery - self.rect.centery, pl.rect.centerx - self.rect.centerx)
+        # lead the target: aim where a moving player will be when the shot arrives
+        tx, ty = pl.rect.center
+        if pl.running:
+            bullet = constants.PROJECTILE_SPEED * constants.BOSS_BULLET_SPEED * 1.1
+            t = math.hypot(tx - self.rect.centerx, ty - self.rect.centery) / bullet
+            lead = t * constants.PLAYER_SPEED * pl.speed_mult * (pl.hero.speed / 5.0) * constants.BOSS_AIM_LEAD
+            tx += pl.last_move_dir[0] * lead
+            ty += pl.last_move_dir[1] * lead
+        lead_base = math.atan2(ty - self.rect.centery, tx - self.rect.centerx)
         if p == "aimed":
-            self._radial(game, base, 1.25)
+            self._radial(game, lead_base, 1.25)
+            if self.phase_index == 0 and len(self.btype.phases) > 1:     # enraged: a 3-shot fan
+                self._radial(game, lead_base - 0.18, 1.1)
+                self._radial(game, lead_base + 0.18, 1.1)
         elif p in ("spread3", "spread5"):
             n = 3 if p == "spread3" else 5
             for i in range(n):
-                self._radial(game, base + (i - (n - 1) / 2) * 0.22, 1.1)
+                self._radial(game, lead_base + (i - (n - 1) / 2) * 0.22, 1.1)
         elif p == "ring":
             off = random.random()
-            for i in range(12):
-                self._radial(game, off + i * math.tau / 12, 0.85)
+            n = 16 if self.phase_index == 0 and len(self.btype.phases) > 1 else 12
+            for i in range(n):
+                self._radial(game, off + i * math.tau / n, 0.85)
         elif p == "cross":
             off = random.choice((0, math.pi / 4))
             for i in range(4):

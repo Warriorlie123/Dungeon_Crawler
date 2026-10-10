@@ -257,7 +257,7 @@ class Game:
         self.enemies.append(e)
         return e
 
-    def hit_enemy(self, e, amount, now, push=None, aoe=False, dot=False, slow_ms=0, stagger_ms=0):
+    def hit_enemy(self, e, amount, now, push=None, aoe=False, dot=False, slow_ms=0, stagger_ms=0, ranged=False):
         """Single source of truth for damage dealt TO enemies."""
         if not e.alive:
             return 0
@@ -277,8 +277,14 @@ class Game:
             dmg *= 1.5
         if e.mtype.behaviour == "armored" and not e.has_status("frozen", now):
             dmg *= 0.5
+        flinch = True
+        if ranged:
+            dmg *= constants.RANGED_DAMAGE_MULT
+            flinch = False
+            if push:
+                push = (push[0] * constants.RANGED_KNOCKBACK_MULT, push[1] * constants.RANGED_KNOCKBACK_MULT)
         dmg = max(1, int(round(dmg)))
-        e.hurt(dmg, now, push, stagger_ms)
+        e.hurt(dmg, now, push, stagger_ms, flinch=flinch)
         if slow_ms:
             e.add_status("slow", now, slow_ms)
         if p.has_status("venom", now) and not dot and not aoe:

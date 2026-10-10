@@ -2,7 +2,7 @@
 items.py - collectible pickups: coins and flasks.
 
 Flask colours (0x72 art) and effects:
-    red     heal 25   (big: 50)   - at full HP it is stored instead (H to drink)
+    red     always goes into your potion bag (big: 2 potions), no limit; H drinks one (+25 HP)
     blue    ability cooldown reset (big: also 4s haste)
     green   regeneration: 4 HP/s for 5s (big: 10s)
     yellow  haste: +35% speed for 6s (big: 10s)
@@ -76,14 +76,12 @@ class Item(pygame.sprite.Sprite):
         colour = self.flask.replace("big_", "")
         x, y = p.rect.centerx, p.rect.top
         if colour == "red":
-            if p.health >= p.max_hp:
-                if p.potions < 3:
-                    p.potions += 1
-                    game.float_text(x, y, "+1 POTION", (255, 120, 120))
-                    return True
-                return False             # leave it on the floor for later
-            amt = 50 if big else 25
-            game.heal_player(amt)
+            # health flasks are always stored, never drunk on pickup: H drinks one when you need it
+            n = 2 if big else 1
+            p.potions += n
+            game.float_text(x, y, f"+{n} POTION" + ("S" if n > 1 else ""), (255, 120, 120))
+            game.assets.play("coin")
+            return True
         elif colour == "blue":
             p.ability_ready_at = 0
             game.float_text(x, y, "ABILITY READY", (120, 170, 255))

@@ -99,6 +99,23 @@ ENEMY_AGGRO_RANGE = 480         # enemies wake up when the player is this close
 ENEMY_STOP_RANGE = 40           # melee enemies stop pushing at this distance
 ENEMY_STUN_MS = 110             # brief flinch after being hit
 ENEMY_KNOCKBACK = 9             # px pushed back per arrow hit
+
+# Balance: ranged heroes used to stun-lock everything from a safe distance,
+# because every projectile hit also flinched the enemy (ENEMY_STUN_MS) and
+# pushed it back. Now ranged hits don't flinch, push much less, and do a bit
+# less damage, so monsters can actually reach a ranged hero.
+RANGED_DAMAGE_MULT = 0.85
+RANGED_KNOCKBACK_MULT = 0.35
+
+# Balance: bosses
+BOSS_HP_MULT = 1.15             # all bosses have 15% more health
+BOSS_BULLET_SPEED = 1.15        # boss projectiles fly 15% faster
+BOSS_BULLET_DAMAGE = 0.85       # boss projectile damage as a share of contact damage (was 0.7)
+BOSS_COOLDOWN_MULT = 0.85       # attack patterns come back 15% sooner
+BOSS_GLOBAL_GAP_MS = 400        # minimum time between two patterns (was 450)
+BOSS_AIM_LEAD = 0.6             # aimed shots partly lead a moving player (0 = no lead)
+BOSS_PURSUIT_RANGE = 360        # beyond this the boss hurries to close in
+BOSS_PURSUIT_MULT = 1.3
 PROJECTILE_SPEED = 4.5
 ELITE_CHANCE = 0.10             # chance a normal enemy spawns as an "elite"
 CONTACT_WINDUP_MS = 260         # enemy must touch the player this long before biting
