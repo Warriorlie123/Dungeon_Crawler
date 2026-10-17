@@ -215,7 +215,13 @@ class SoundBank:
             return
         self._current_path = path
         try:
-            pygame.mixer.music.fadeout(fade_ms // 2)
+            if constants.IS_WEB:
+                # In the browser, loading a new track while the old one is
+                # still fading out waits for the fade to finish - but the fade
+                # never advances while Python is waiting, so the page froze.
+                pygame.mixer.music.stop()
+            else:
+                pygame.mixer.music.fadeout(fade_ms // 2)
             pygame.mixer.music.load(path)
             pygame.mixer.music.play(-1, 0.0, fade_ms)
             self.apply_volumes()
