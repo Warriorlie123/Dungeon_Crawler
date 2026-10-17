@@ -12,11 +12,15 @@ Engineering notes
   project folder. Anchoring on __file__ removes that whole class of bugs.
 """
 import os
+import sys
 
 # --------------------------------------------------------------------------
 # File system
 # --------------------------------------------------------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# True when running in the browser (pygbag / WebAssembly build)
+IS_WEB = sys.platform == "emscripten"
 ASSET_DIR = os.path.join(BASE_DIR, "assets")
 LEVEL_DIR = os.path.join(BASE_DIR, "levels")
 

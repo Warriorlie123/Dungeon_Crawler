@@ -25,6 +25,7 @@ Flow:  menu -> select hero -> intro cutscene -> level 1 -> shop -> level 2
        ... boss levels are followed by a story cutscene ... level 20 ->
        ending cutscene -> victory screen.
 """
+import asyncio
 import math
 import random
 import sys
@@ -444,11 +445,13 @@ class Game:
     # ------------------------------------------------------------------
     # Main loop
     # ------------------------------------------------------------------
-    def run(self):
+    async def run(self):
         while self.running:
             self.clock.tick(constants.FPS)
             self.frame(pygame.event.get())
             pygame.display.update()
+            # hand control back to the browser once per frame (no-op on desktop)
+            await asyncio.sleep(0)
         pygame.quit()
 
     def frame(self, events):
@@ -456,7 +459,7 @@ class Game:
         Mouse.begin_frame()
         self.input.begin_frame()
         for ev in events:
-            if ev.type == pygame.QUIT:
+            if ev.type == pygame.QUIT and not constants.IS_WEB:
                 self.running = False
             Mouse.handle(ev)
             self.input.handle(ev, now)
@@ -499,7 +502,9 @@ class Game:
             else:
                 self.state = "select"
             return
-        if self.exit_button.draw(s, self.input.pressed) or pygame.K_ESCAPE in self.input.pressed:
+        # a browser tab can't be "exited", so the web build has no EXIT button
+        if not constants.IS_WEB and (self.exit_button.draw(s, self.input.pressed)
+                                     or pygame.K_ESCAPE in self.input.pressed):
             self.running = False
             return
         if self.settings_button.draw(s, self.input.pressed):
@@ -836,7 +841,7 @@ def parse_args():
     return level, hero
 
 
-def main():
+async def main():
     audio = True
     try:
         pygame.mixer.init()
@@ -846,8 +851,8 @@ def main():
     pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
     pygame.display.set_caption("Dungeon Crawler - The Seal of Vel Duran")
     level, hero = parse_args()
-    Game(start_level=level, audio=audio, hero_key=hero).run()
+    await Game(start_level=level, audio=audio, hero_key=hero).run()
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

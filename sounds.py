@@ -121,6 +121,10 @@ MUSIC = {
     "ending":  ("ending", "ending / victory screen"),
 }
 MUSIC_FALLBACK = constants.asset_path("audio", "music.wav")
+if constants.IS_WEB:
+    # the browser build ships Ogg Vorbis copies of every sound
+    EXTS = (".ogg", ".wav", ".mp3")
+    MUSIC_FALLBACK = constants.asset_path("audio", "music.ogg")
 ORIGINAL_FILES = {"shot": "arrow_shot.mp3", "hit": "arrow_hit.wav", "coin": "coin.wav", "heal": "heal.wav"}
 
 
@@ -153,7 +157,10 @@ class SoundBank:
     def _load(self, key):
         path = self._find(SFX_DIR, key)
         if path is None and key in ORIGINAL_FILES:
-            path = constants.asset_path("audio", ORIGINAL_FILES[key])
+            name = ORIGINAL_FILES[key]
+            if constants.IS_WEB:
+                name = os.path.splitext(name)[0] + ".ogg"
+            path = constants.asset_path("audio", name)
         if path is None:
             return None
         try:

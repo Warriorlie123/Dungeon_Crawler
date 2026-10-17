@@ -4,6 +4,10 @@ A top-down pygame dungeon crawler with 10 heroes, 20 levels, 8 bosses, 22
 monster types, a shop and weapon forge between levels, and story cutscenes.
 Every character in **0x72's DungeonTileset II** has a role in the game.
 
+**Play it in the browser:** [omerburhan.com/Dungeon_Crawler](https://omerburhan.com/Dungeon_Crawler/)
+(the same Python code, compiled to WebAssembly with [pygbag](https://github.com/pygame-web/pygbag);
+the first load takes a few seconds, and the menu has no Exit button there).
+
 ```
 pip install pygame
 python main.py                              # play
@@ -11,6 +15,7 @@ python main.py --level 12 --hero lizard_f   # jump straight in (testing)
 python tools/smoke_test.py                  # headless bot plays all 20 levels + every hero
 python tools/level_generator.py             # regenerate levels 4-20
 python tools/build_atlas.py <0x72 frames folder>   # rebuild the sprite atlas
+python build_web.py                         # rebuild the browser version in docs/ (needs pygbag + ffmpeg)
 ```
 
 ## Controls
