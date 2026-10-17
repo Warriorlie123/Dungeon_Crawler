@@ -843,6 +843,10 @@ def parse_args():
 
 async def main():
     audio = True
+    # In the browser the game shares one thread with the page, so the sound card
+    # needs a bigger buffer (2048 samples, ~46 ms) or the audio crackles.
+    if constants.IS_WEB:
+        pygame.mixer.pre_init(44100, -16, 2, 2048)
     try:
         pygame.mixer.init()
     except pygame.error:
